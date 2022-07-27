@@ -41,6 +41,11 @@ main {
     width: 100px;
 }
 
+img {
+    width: 95%;
+    height: 95%;
+}
+
 .boton:hover {
     cursor: pointer;
 }
