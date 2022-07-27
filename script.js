@@ -1,4 +1,12 @@
 
+document.addEventListener("DOMContentLoaded", comenzarJuego);
+$tablero.addEventListener("click", obtenerCarta);
+
+function comenzarJuego() {
+    mezclarCartas();
+}
+
+
 function mezclarCartas() {
     cartas = cartas.sort(() => {
         return Math.random() - 0.5;
