@@ -5,3 +5,11 @@ function mezclarCartas() {
     });
 }
 
+function actualizarMovimientos() {
+    movimientos++;
+    let $estadisticaMovimientos = document.querySelector(
+        "#tablero-movimientos"
+    );
+    $estadisticaMovimientos.innerHTML = `Movimientos ${movimientos}`;
+}
+
