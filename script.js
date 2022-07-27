@@ -13,3 +13,7 @@ function actualizarMovimientos() {
     $estadisticaMovimientos.innerHTML = `Movimientos ${movimientos}`;
 }
 
+function mostrarImagen(carta, id) {
+    carta.innerHTML = `<img src="./imagenes/${id}.png" alt=""/>`;
+    carta.disabled = true;
+}
