@@ -1,3 +1,13 @@
+const $tablero = document.querySelector("#tablero-memotest");
+let cartas = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
+let turnoActual = [];
+let cartasDestapadas = 0;
+let movimientos = 0;
+let aciertos = 0;
+let cuadros = [];
+let timer = false;
+let tiempoActual = 40;
+let contadorDeTiempo;
 
 document.addEventListener("DOMContentLoaded", comenzarJuego);
 $tablero.addEventListener("click", obtenerCarta);
