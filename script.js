@@ -26,6 +26,20 @@ function mostrarImagen(carta, id) {
     carta.disabled = true;
 }
 
+
+function iniciarContador() {
+    const $tiempo = document.querySelector("#tablero-tiempo");
+    contadorDeTiempo = setInterval(() => {
+        tiempoActual--;
+        $tiempo.textContent = `Tiempo ${tiempoActual} segundos `;
+
+        if (tiempoActual === 0) {
+            clearInterval(contadorDeTiempo);
+            finalizarJuego();
+        }
+    }, 1000);
+}
+
 function finalizarJuego() {
     const $cuadros = document.querySelectorAll(".boton");
     const $titulo = document.querySelector(".titulo");
