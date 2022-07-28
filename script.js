@@ -16,6 +16,34 @@ function comenzarJuego() {
     mezclarCartas();
 }
 
+function obtenerCarta(e) {
+    const $carta = e.target;
+
+    if ($carta.classList.contains("boton")) {
+        if (timer === false) {
+            ocultarIndicacion();
+            iniciarContador();
+            timer = true;
+        }
+
+        cuadros = [...cuadros, $carta];
+        turnoActual = [...turnoActual, cartas[$carta.id]];
+        actualizarMovimientos();
+        cartasDestapadas++;
+
+        if (cartasDestapadas === 1) {
+            let primeraEleccion = cartas[$carta.id];
+            mostrarImagen($carta, primeraEleccion);
+        } else {
+            let segundaEleccion = cartas[$carta.id];
+            mostrarImagen($carta, segundaEleccion);
+        }
+
+        if (turnoActual.length === 2) {
+            evaluarTurno();
+        }
+    }
+}
 
 function mezclarCartas() {
     cartas = cartas.sort(() => {
