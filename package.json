@@ -1,0 +1,22 @@
+{
+  "name": "memotest",
+  "version": "1.0.0",
+  "description": "Juego de memotest",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Agustin101/Memotestv1.git"
+  },
+  "author": "Agustin Barberis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Agustin101/Memotestv1/issues"
+  },
+  "homepage": "https://github.com/Agustin101/Memotestv1#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.0"
+  }
+}
