@@ -36,3 +36,7 @@ function finalizarJuego() {
     });
 }
 
+function ocultarIndicacion() {
+    const $subtitulo = document.querySelector(".h6");
+    $subtitulo.innerText = " ";
+}
