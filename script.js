@@ -25,3 +25,14 @@ function mostrarImagen(carta, id) {
     carta.innerHTML = `<img src="./imagenes/${id}.png" alt=""/>`;
     carta.disabled = true;
 }
+
+function finalizarJuego() {
+    const $cuadros = document.querySelectorAll(".boton");
+    const $titulo = document.querySelector(".titulo");
+    $titulo.textContent = "Perdiste!";
+    $cuadros.forEach((cuadro, i) => {
+        cuadro.innerHTML = `<img src="./imagenes/${cartas[i]}.png" alt=""/>`;
+        cuadro.disabled = true;
+    });
+}
+
